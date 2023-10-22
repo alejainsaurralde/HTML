@@ -2,69 +2,92 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primera página web</title>
-    <link rel="shorcut icon" href="favicon.png" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Primera página web</title>
+  <link rel="shorcut icon" href="favicon.png" type="image/x-icon">
 
 </head>
 
 <body>
-    <h1> Formularios:
-    </h1>
+  <h1> Formularios:
+  </h1>
 
-    <hr>
+  <hr>
 
-    <form>
-        <label for="Usuario">Usuario</label>
-        <input type="text" id="Usuario" name="Usuario" placeholder="Escriba aqui su usuario" />
-        <br>
-        <label for="password">Contraseña</label>
-        <input type="password" id="password" name="password" placeholder="Escriba aqui su contraseña" />
-        <br>
-        <input type="checkbox" name="condiciones" id="condiciones">¿Esta de acuerdo con las condiciones del contrato?
-        <br>
-        <input type="checkbox" name="lenguajes" value="HTML">HTML
-        <input type="checkbox" name="lenguajes" value="CSS">CSS
-        <input type="checkbox" name="lenguajes" value="JAVASCRIP">JAVASCRIP
-        <input type="checkbox" name="lenguajes" value="REACT">REACT
-        <br>
-        <input type="radio" name="lenguajes" value="HTML">HTML
-        <input type="radio" name="lenguajes" value="CSS">CSS
-        <input type="radio" name="lenguajes" value="JAVASCRIP">JAVASCRIP
-        <input type="radio" name="lenguajes" value="REACT">REACT
-        <br>
-        <label for="Programando">Años programando</label>
-        <input type="number" id="programando" name="programando" placeholder="Años programando" />
-        <br>
-        <br>
-        <label for="Archivo">Subi tu curriculum</label>
-        <input type="file" id="Archivo" name="Archivo" value="file" />
-        <br>
-        <br>
-        <label for="Opinion">Dejanos tu comentario</label>
-        <textarea name="Opinion" id="Opinion" placeholder="Escribi tu opinion" rows="10" cols="50"></textarea>
-        <br>
-        <br>
-        <label for="Pais">Seleciona tu pais de origen</label>
-        <select name="pais" id="pais">
+  <form action="envio.php" method="POST" target="_blank">
+    <!-- <label for="Usuario">Usuario</label>
+    <input type="text" id="Usuario" name="Usuario" placeholder="Escribi tu nombre" required/>
+    <small>Debe contener 9 caracteres</small> -->
 
-          <optgroup label="America">
-            <option value="Argentina">Argentina</option>
-            <option value="Mexico" selected="selected">Mexico</option>
-            <option value="Uruguay">Mexico</option>
-          </optgroup>
+    <label for="Usuario">Mail:</label>
+    <input type="email" id="Usuario" name="Usuario" placeholder="Escribi tu mail" required/>
+    <small>Es campo es obligatorio</small>
 
-           <optgroup label="Europa">
-            <option value="Francia">Francia</option>
-            <option value="Croacia">Croacia</option>
-            <option value="Marruecos">Marruecos</option>
-           </optgroup>
-        </select>
+    <!-- maxlength="10" minlength="3" pattern="(a-z)(9)"  -->
+    <!-- value="Alejandra" disabled readonly -->
+    <br>
+    <label for="password">Contraseña</label>
+    <input type="password" id="password" name="password" placeholder="Escriba aqui su contraseña" required />
+    <small>Este campo es obligatorio</small>
+    <br>
+    <input type="checkbox" name="condiciones" id="condiciones">¿Esta de acuerdo con las condiciones del contrato?
+    <br>
+    <input type="checkbox" name="lenguajes" value="HTML"required>HTML
+    <input type="checkbox" name="lenguajes" value="CSS"required>CSS
+    <input type="checkbox" name="lenguajes" value="JAVASCRIP"required>JAVASCRIP
+    <input type="checkbox" name="lenguajes" value="REACT"required>REACT
+    <br>
+    <input type="radio" name="lenguajes" value="HTML">HTML
+    <input type="radio" name="lenguajes" value="CSS">CSS
+    <input type="radio" name="lenguajes" value="JAVASCRIP">JAVASCRIP
+    <input type="radio" name="lenguajes" value="REACT">REACT
+    <br>
+    <label for="Programando">Años programando</label>
+    <input type="number" id="programando" name="programando" placeholder="Años programando" max="3" min="0"/>
+    <br>
+    <br>
+    <label for="Archivo">Subi tu curriculum</label>
+    <input type="file" id="Archivo" name="Archivo" value="file" multiple />
+    <br>
+    <br>
+    <label for="Fecha">Fecha de ingreso laboral</label>
+    <input type="date" id="Fecha" name="Fecha" max="2023-10-22" />
+    <br>
+    <br>
+    <label for="Opinion">Dejanos tu comentario</label>
+    <textarea name="Opinion" id="Opinion" placeholder="Escribi tu opinion" rows="10" cols="50"></textarea>
+    <br>
+    <br>
+    <label for="Pais">Seleciona tu pais de origen</label>
+    <select name="pais" id="pais">
 
-    </form>
+      <optgroup label="America">
+        <option value="Argentina">Argentina</option>
+        <option value="Mexico" selected="selected">Mexico</option>
+        <option value="Uruguay">Mexico</option>
+      </optgroup>
 
+      <optgroup label="Europa">
+        <option value="Francia">Francia</option>
+        <option value="Croacia">Croacia</option>
+        <option value="Marruecos">Marruecos</option>
+      </optgroup>
+    </select>
 
+    <br>
+    <br>
+    <input type="button" value="Enviar tus datos"> Button
+    <br>
+    <input type="submit" value="Enviar tus datos"> Submit
+    <input type="reset" value="Resetear formulario">
+
+    <br><br>
+
+    <input type="button" onclick="alert('Suscribite a mi canal')" value="Saludando">
+    <br>
+    <button onclick="alert('Suscribite a mi canal')">Hazme clic!</button>
+  </form>
 
 </body>
 
